@@ -1,8 +1,8 @@
-# student attendance app
+# Student attendance app
 
 Technologies used: Flutter, RestAPI, Firebase (Realtime Database)
 
-## introduction
+## Introduction
 
 the home screen has two dropdown menus, one for selecting classes from 1 to 10
 and another for selecting sections of those classes from A to D.  
@@ -12,7 +12,7 @@ after marking the desired attendance status the list automatically updates along
 
 
 
-## inner workings
+## Inner workings
 
 this app uses RestAPI to communicate with the firebase realtime database to fetch all the students while the app is initialising
 then provider package is used for state management to provide data throughout the app whenever and wherever needed.
@@ -29,7 +29,6 @@ attendance status of the current status as well as does a PATCH request on the d
 i decided to use a realtime database to store the students instead of doing it within the code itself as if the app closes the state wouldnt persist and all the
 changes done will be reset.
 
-
 i have also added comments throughout the code to briefly explain what that snippet does
 
 ## screenshots
@@ -37,6 +36,5 @@ i have also added comments throughout the code to briefly explain what that snip
 <img src="https://github.com/user-attachments/assets/3dc418f4-ebbf-4961-a5ac-e3fed9c21e0a" alt="Alt Text" width="300">
 <img src="https://github.com/user-attachments/assets/6dc0ece8-5224-4387-8d7d-5b0484592c5f" alt="Alt Text" width="300">
 <img src="https://github.com/user-attachments/assets/5d14fb36-1bf4-48b9-9b88-49ace00344bb" alt="Alt Text" width="300">
-
 
 
