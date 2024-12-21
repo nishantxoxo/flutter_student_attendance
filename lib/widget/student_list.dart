@@ -12,15 +12,13 @@ class StudentList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final students = Provider.of<Students>(context).getClass(cls, section);
 
     return Expanded(
-      
       child: ListView.builder(
         itemCount: students.length,
         itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
-                                                                                //setting up provider for single student
+          //setting up provider for single student
           value: students[i],
           child: StudentItem(),
         ),

@@ -9,8 +9,8 @@ class StudentItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final student = Provider.of<Student>(context);
 
-    return GestureDetector(
-      onTap: () {
+    return GestureDetector( 
+      onTap: () {                                   //dialog box which shows after tapping the card
         showDialog(
           context: context,
           builder: (context) {
@@ -21,14 +21,14 @@ class StudentItem extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      student.setattedance(student.id - 1, true);
+                      student.setattedance(student.id - 1, true);                  //call the function to set the attendance to present
                       Navigator.pop(context);
                     },
                     child: Text('Present'),
                   ),
                   TextButton(
                     onPressed: () {
-                      student.setattedance(student.id - 1, false);
+                      student.setattedance(student.id - 1, false);                     //call the function to set the attendance to absent
                       Navigator.pop(context);
                     },
                     child: Text('Absent'),
@@ -41,10 +41,10 @@ class StudentItem extends StatelessWidget {
       },
       child: Card(
         margin:
-            const EdgeInsets.symmetric(vertical: 8, horizontal: 10), //margins
-        elevation: 4, //card elevation
+            const EdgeInsets.symmetric(vertical: 8, horizontal: 10),             //margins
+        elevation: 4,                                                      //card elevation
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12)), //shape of card
+            borderRadius: BorderRadius.circular(12)),                    //shape of card
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Row(
@@ -77,7 +77,7 @@ class StudentItem extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.check_circle,
-                    color: student.attendance ? Colors.green : Colors.red,
+                    color: student.attendance ? Colors.green : Colors.red,                 //change the color depending on the attendance status
                   ),
                   const SizedBox(height: 4),
                   Text(

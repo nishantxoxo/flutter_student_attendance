@@ -21,7 +21,7 @@ class Student with ChangeNotifier {
       this.attendance = false,
       this.time = "--:--"});
 
-  void setattedance(int id, bool att) {
+  void setattedance(int id, bool att) {                                 //function to set attendance status of a specific student
     final url =
         '$DATABASE_URL/$id.json';
     final currtime = att ? DateFormat('HH:mm').format(DateTime.now()) : "--:--";

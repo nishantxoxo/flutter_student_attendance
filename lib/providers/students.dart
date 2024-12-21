@@ -6,13 +6,13 @@ import 'package:http/http.dart' as http;
 import 'package:skooliya/url.dart';
 
 class Students with ChangeNotifier {
-  List<Student> _students = [];
+  List<Student> _students = [];                   // to store all students
 
   List<Student> get student {
     return [..._students];
   }
 
-  List<Student> getClass(int clas, String section) {
+  List<Student> getClass(int clas, String section) {                 // fucntion which return the students from a specifc class and section
     return _students
         .where(
           (element) => element.cls == clas && element.section == section,
@@ -20,8 +20,8 @@ class Students with ChangeNotifier {
         .toList();
   }
 
-  Future<void> fetchAndSet() async {
-    var url =
+  Future<void> fetchAndSet() async {                                    //fucntion to fetch all students from firebase database
+    var url = 
         "$DATABASE_URL/.json";
 
     try {
